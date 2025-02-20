@@ -6,7 +6,7 @@ using RimWorld.Planet;
 using HarmonyLib;
 using UnityEngine;
 
-namespace BiggerTooltips
+namespace EnhancedBackstoryFeatures
 {
 	[StaticConstructorOnStartup]
 	public class Main
