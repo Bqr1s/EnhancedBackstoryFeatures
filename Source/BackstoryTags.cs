@@ -7,6 +7,8 @@ namespace EnhancedBackstoryFeatures
 	public class BackstoryTags : DefModExtension
 	{
 		public List<string> Tags;
+		// These tags should match on 2 pawns to work. So they are placed in separate list for optimization.
+		public List<int> MatchingTags;
 	}
 }
 

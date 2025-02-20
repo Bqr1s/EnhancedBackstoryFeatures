@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--<<MatchingDictionaryDef>
+    <defName>default</defName>
+	<thoughts>
+	   <li><key>communist</key><value>we are comrades</value></li>
+	</touhts>
+  </MatchingDictionaryDef>-->
+  
+   <ThoughtDef>
+    <defName>ecb_bb_ThoughtBaka</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_Baka</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>they are baka</label>
+        <baseOpinionOffset>-9</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+   <ThoughtDef>
+    <defName>ecb_bb_ThoughtMatching</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_Matching</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>we are not SUS</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

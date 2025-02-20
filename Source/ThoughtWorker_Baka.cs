@@ -15,7 +15,7 @@ namespace EnhancedBackstoryFeatures
 			foreach (BackstoryDef bs in pawn.story.AllBackstories)
 			{
 				BackstoryTags tags = bs.GetModExtension<BackstoryTags>();
-				if (tags != null && tags.Tags.Contains("Baka"))
+				if (tags != null && tags.Tags != null && tags.Tags.Contains("Baka"))
 				{
 					return true;
 				}
