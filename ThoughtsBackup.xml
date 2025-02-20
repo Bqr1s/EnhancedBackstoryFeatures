@@ -28,8 +28,12 @@
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>we are not SUS</label>
+        <label>we are both different forms of brainrot</label>
         <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+	  <li>
+        <label>we both do real business</label>
+        <baseOpinionOffset>10</baseOpinionOffset>
       </li>
     </stages>
   </ThoughtDef>

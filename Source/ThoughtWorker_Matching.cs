@@ -45,7 +45,7 @@ namespace EnhancedBackstoryFeatures
 				return false;
 			}
 			List<int> ourTags = GetAllMatchingTaggs(pawn);
-			List<int> theirTags = GetAllMatchingTaggs(pawn);
+			List<int> theirTags = GetAllMatchingTaggs(other);
 			IEnumerable<int> commonTags = ourTags.Intersect(theirTags);
 			if (commonTags.Any())
 			{
