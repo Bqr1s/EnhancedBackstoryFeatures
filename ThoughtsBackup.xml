@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!--<<MatchingDictionaryDef>
-    <defName>default</defName>
-	<thoughts>
-	   <li><key>communist</key><value>we are comrades</value></li>
-	</touhts>
-  </MatchingDictionaryDef>-->
-  
    <ThoughtDef>
     <defName>ecb_bb_ThoughtBaka</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
@@ -34,6 +27,10 @@
 	  <li>
         <label>we both do real business</label>
         <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+	  <li>
+        <label>content adoration</label>
+        <baseOpinionOffset>20</baseOpinionOffset>
       </li>
     </stages>
   </ThoughtDef>
