@@ -56,7 +56,7 @@
     <Compile Include="BackstoryTags.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThoughtWorker_Baka.cs" />
+    <Compile Include="ThoughtWorker_BackstoryRelational.cs" />
     <Compile Include="ThoughtWorker_Matching.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

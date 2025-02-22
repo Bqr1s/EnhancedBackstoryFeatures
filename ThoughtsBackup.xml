@@ -4,7 +4,7 @@
    <ThoughtDef>
     <defName>ecb_bb_ThoughtBaka</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
-    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_Baka</workerClass>
+    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_BackstoryRelational</workerClass>
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
@@ -15,20 +15,33 @@
   </ThoughtDef>
   
    <ThoughtDef>
+    <defName>ecb_bb_ThoughtCutie</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_BackstoryRelational</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>they are adorable</label>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+   <ThoughtDef>
     <defName>ecb_bb_ThoughtMatching</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
     <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_Matching</workerClass>
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
-      <li>
+      <li>  <!-- 0 -->
         <label>we are both different forms of brainrot</label>
         <baseOpinionOffset>15</baseOpinionOffset>
       </li>
-	  <li>
+	  <li>  <!-- 1 -->
         <label>we both do real business</label>
         <baseOpinionOffset>10</baseOpinionOffset>
       </li>
-	  <li>
+	  <li>  <!-- 2 -->
         <label>content adoration</label>
         <baseOpinionOffset>20</baseOpinionOffset>
       </li>
