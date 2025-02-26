@@ -13,10 +13,51 @@ namespace EnhancedBackstoryFeatures
 	{
 		static Main()
 		{
-			// Use unique harmony ID based on mod name (or location), so that assembly can be shipped in 2 separate mods being active together
 
+		}
+	}
+
+	public class EnhancedBackstoryFeatures : Mod
+	{
+		public EnhancedBackstoryFeatures(ModContentPack content) : base(content)
+		{
 			Harmony pat = new Harmony("ecb_bb_EnhancedBackstoryFeatures");
 			pat.PatchAll();
+		}
+	}
+
+	[HarmonyPatch(typeof(PlayDataLoader), "ResetStaticDataPost")]
+	public static class PostLoadedDefsFromXML
+	{
+		public static void UpdateThoughtsDictionary(ref Dictionary<string, int> indexesDictionary, string tag)
+		{
+			// We are initializing, this got to be static because no ThoughtWorker surroundings properly created
+			Log.Warning("++Init");
+			ThoughtDef thoughtDef = DefDatabase<ThoughtDef>.GetNamed(tag);
+			Dictionary<string, ThoughtStage> thoughtsDictionary = thoughtDef.GetModExtension<ThoghtDictionaryDef>()?.items ?? null;
+			if (thoughtsDictionary == null)
+			{
+				Log.Warning("--Null dict"); 
+				return;
+			}
+			indexesDictionary = new Dictionary<string, int>();
+			List<ThoughtStage> stages = DefDatabase<ThoughtDef>.GetNamed(tag).stages;
+			if (stages == null)
+			{
+				stages = new List<ThoughtStage>();
+				DefDatabase<ThoughtDef>.GetNamed(tag).stages = stages;
+			}
+			foreach (KeyValuePair<string, ThoughtStage> entry in thoughtsDictionary)
+			{
+				Log.Warning("+AddStage");
+				stages.Add(entry.Value);
+				indexesDictionary.Add(entry.Key, stages.Count - 1);
+			}
+		}
+		public static void Postfix()
+		{
+			//ThoughtWorker_OshiOtaku.UpdateThoughts("ecb_bb_ThoughtOshiOtaku");
+			UpdateThoughtsDictionary(ref ThoughtWorker_OshiOtaku.thoughtIndexesDictionary, "ecb_bb_ThoughtOshiOtaku");
 		}
 	}
 

@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-   <ThoughtDef>
+	<ThoughtDef>
+    <defName>ecb_bb_ThoughtOshiOtaku</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_OshiOtaku</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+	<modExtensions>
+		<li Class="EnhancedBackstoryFeatures.ThoghtDictionaryDef">
+		<items>
+			<li><key>VTube</key>
+			<value>
+				<label>I love their content!</label>
+				<baseOpinionOffset>20</baseOpinionOffset>
+			</value></li>
+		</items>
+		</li>
+    </modExtensions>
+  </ThoughtDef>
+
+  <ThoughtDef>
     <defName>ecb_bb_ThoughtBaka</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
     <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_BackstoryRelational</workerClass>
@@ -14,7 +32,7 @@
     </stages>
   </ThoughtDef>
   
-   <ThoughtDef>
+  <ThoughtDef>
     <defName>ecb_bb_ThoughtCutie</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
     <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_BackstoryRelational</workerClass>
@@ -22,29 +40,30 @@
     <stages>
       <li>
         <label>they are adorable</label>
-        <baseOpinionOffset>10</baseOpinionOffset>
+        <baseOpinionOffset>7</baseOpinionOffset>
       </li>
     </stages>
   </ThoughtDef>
-  
-   <ThoughtDef>
+
+  <ThoughtDef>
     <defName>ecb_bb_ThoughtMatching</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
     <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_Matching</workerClass>
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
-      <li>  <!-- 0 -->
-        <label>we are both different forms of brainrot</label>
+      <li>
+        <label>we share a destiny, bound by brainrot</label>
         <baseOpinionOffset>15</baseOpinionOffset>
       </li>
-	  <li>  <!-- 1 -->
+	  <li>
         <label>we both do real business</label>
         <baseOpinionOffset>10</baseOpinionOffset>
       </li>
-	  <li>  <!-- 2 -->
-        <label>content adoration</label>
+	  <li>
+        <label>I love their content</label>
         <baseOpinionOffset>20</baseOpinionOffset>
       </li>
     </stages>
   </ThoughtDef>
+
 </Defs>

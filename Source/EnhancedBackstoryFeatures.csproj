@@ -56,8 +56,10 @@
     <Compile Include="BackstoryTags.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThoughDictionaryDef.cs" />
     <Compile Include="ThoughtWorker_BackstoryRelational.cs" />
     <Compile Include="ThoughtWorker_Matching.cs" />
+    <Compile Include="ThoughtWorker_OshiOtaku.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
