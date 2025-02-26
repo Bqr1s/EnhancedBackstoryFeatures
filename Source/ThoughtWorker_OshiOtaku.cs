@@ -7,29 +7,7 @@ namespace EnhancedBackstoryFeatures
 {
 	public class ThoughtWorker_OshiOtaku : ThoughtWorker
 	{
-		public static Dictionary<string, int> thoughtIndexesDictionary;
-		/*public static void UpdateThoughts(string tag)
-		{
-			// We are initializing, this got to be static because no ThoughtWorker surroundings properly created
-			ThoughtDef thoughtDef = DefDatabase<ThoughtDef>.GetNamed(tag);
-			Dictionary<string, ThoughtStage> thoughtsDictionary = thoughtDef.GetModExtension<ThoghtDictionaryDef>()?.items ?? null;
-			if (thoughtsDictionary == null)
-			{
-				return;
-			}
-			thoughtIndexesDictionary = new Dictionary<string, int>();
-			List<ThoughtStage> stages = DefDatabase<ThoughtDef>.GetNamed(tag).stages;
-			if(stages == null)
-			{
-				stages = new List<ThoughtStage>();
-				DefDatabase<ThoughtDef>.GetNamed(tag).stages = stages;
-			}
-			foreach (KeyValuePair<string, ThoughtStage> entry in thoughtsDictionary)
-			{
-				stages.Add(entry.Value);
-				thoughtIndexesDictionary.Add(entry.Key, stages.Count - 1);
-			}
-		}*/
+		public static Dictionary<string, int> stageIndexesDictionary;
 		private List<string> GetAllOshiTags(Pawn pawn)
 		{
 			List<string> result = new List<string>();
@@ -85,7 +63,7 @@ namespace EnhancedBackstoryFeatures
 				// A hack. Thought stage is actually is a number in stages list. Each stage represent a thought for diffetent group of people with same backstory tags
 				string key = oshiOtakuMatches.First();
 				Log.Warning("++Thought with key:" + key);
-				return ThoughtState.ActiveAtStage(thoughtIndexesDictionary[key]);
+				return ThoughtState.ActiveAtStage(stageIndexesDictionary[key]);
 			}
 			return false;
 		}

@@ -60,6 +60,7 @@
     <Compile Include="ThoughtWorker_BackstoryRelational.cs" />
     <Compile Include="ThoughtWorker_Matching.cs" />
     <Compile Include="ThoughtWorker_OshiOtaku.cs" />
+    <Compile Include="ThoughtWorker_Tabemono.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

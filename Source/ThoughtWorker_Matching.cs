@@ -7,9 +7,10 @@ namespace EnhancedBackstoryFeatures
 {
 	public class ThoughtWorker_Matching : ThoughtWorker
 	{
-		private List<int> GetAllMatchingTags(Pawn pawn)
+		public static Dictionary<string, int> stageIndexesDictionary;
+		private List<string> GetAllMatchingTags(Pawn pawn)
 		{
-			List<int> result = new List<int>();
+			List<string> result = new List<string>();
 			foreach (BackstoryDef bs in pawn.story.AllBackstories)
 			{
 				BackstoryTags tags = bs.GetModExtension<BackstoryTags>();
@@ -39,13 +40,14 @@ namespace EnhancedBackstoryFeatures
 			{
 				return false;
 			}
-			List<int> ourTags = GetAllMatchingTags(pawn);
-			List<int> theirTags = GetAllMatchingTags(other);
-			IEnumerable<int> commonTags = ourTags.Intersect(theirTags);
+			List<string> ourTags = GetAllMatchingTags(pawn);
+			List<string> theirTags = GetAllMatchingTags(other);
+			IEnumerable<string> commonTags = ourTags.Intersect(theirTags);
 			if (commonTags.Any())
 			{
 				// A hack. Thought stage is actually is a number in stages list. Each stage represent a thought for diffetent group of people with same backstory tags
-				return ThoughtState.ActiveAtStage(commonTags.First());
+				string key = commonTags.First();
+				return ThoughtState.ActiveAtStage(stageIndexesDictionary[key]);
 			}
 			return false;
 		}

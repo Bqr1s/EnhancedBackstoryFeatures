@@ -56,8 +56,11 @@ namespace EnhancedBackstoryFeatures
 		}
 		public static void Postfix()
 		{
-			//ThoughtWorker_OshiOtaku.UpdateThoughts("ecb_bb_ThoughtOshiOtaku");
-			UpdateThoughtsDictionary(ref ThoughtWorker_OshiOtaku.thoughtIndexesDictionary, "ecb_bb_ThoughtOshiOtaku");
+			// This is a bit wired due to vanilla design not too handy for these type of thoughts.
+			// During initializing, thought worker object with surroundings/linked object does not exist, aslo got to use one dictionary for all objects of the given type, thus static
+			// and because of static, just calling same initialize function here for different classes internals. 
+			UpdateThoughtsDictionary(ref ThoughtWorker_OshiOtaku.stageIndexesDictionary, "ecb_bb_ThoughtOshiOtaku");
+			UpdateThoughtsDictionary(ref ThoughtWorker_Matching.stageIndexesDictionary, "ecb_bb_ThoughtMatching");
 		}
 	}
 

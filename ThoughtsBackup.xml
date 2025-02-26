@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <ThoughtDef>
+    <defName>ecb_bb_ThoughtTabemono</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_Tabemono</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+	<stages>
+      <li>
+        <label>Tabemono? Tabemono!</label>
+        <baseOpinionOffset>3</baseOpinionOffset>
+      </li>
+	  <li>
+        <label>eating toxic meat is stupid</label>
+        <baseOpinionOffset>-2</baseOpinionOffset>
+      </li>
+	  <li>
+        <label>i like pork</label>
+        <baseOpinionOffset>5</baseOpinionOffset>
+      </li>
+	 </stages>
+  </ThoughtDef>
+	
 	<ThoughtDef>
     <defName>ecb_bb_ThoughtOshiOtaku</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
@@ -11,8 +32,31 @@
 		<items>
 			<li><key>VTube</key>
 			<value>
-				<label>I love their content!</label>
+				<label>I love their content</label>
 				<baseOpinionOffset>20</baseOpinionOffset>
+			</value></li>
+		</items>
+		</li>
+    </modExtensions>
+  </ThoughtDef>
+  
+    <ThoughtDef>
+    <defName>ecb_bb_ThoughtMatching</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_Matching</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+	<modExtensions>
+		<li Class="EnhancedBackstoryFeatures.ThoghtDictionaryDef">
+		<items>
+			<li><key>Brainrot</key>
+			<value>
+				<label>we share a destiny, bound by brainrot</label>
+				<baseOpinionOffset>15</baseOpinionOffset>
+			</value></li>
+			<li><key>Businessman</key>
+			<value>
+				<label>we both do real business</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
 			</value></li>
 		</items>
 		</li>
@@ -41,27 +85,6 @@
       <li>
         <label>they are adorable</label>
         <baseOpinionOffset>7</baseOpinionOffset>
-      </li>
-    </stages>
-  </ThoughtDef>
-
-  <ThoughtDef>
-    <defName>ecb_bb_ThoughtMatching</defName>
-    <thoughtClass>Thought_SituationalSocial</thoughtClass>
-    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_Matching</workerClass>
-    <validWhileDespawned>true</validWhileDespawned>
-    <stages>
-      <li>
-        <label>we share a destiny, bound by brainrot</label>
-        <baseOpinionOffset>15</baseOpinionOffset>
-      </li>
-	  <li>
-        <label>we both do real business</label>
-        <baseOpinionOffset>10</baseOpinionOffset>
-      </li>
-	  <li>
-        <label>I love their content</label>
-        <baseOpinionOffset>20</baseOpinionOffset>
       </li>
     </stages>
   </ThoughtDef>
