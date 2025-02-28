@@ -2,6 +2,23 @@
 <Defs>
 
   <ThoughtDef>
+    <defName>ecb_bb_ThoughtLazyBumo</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_LazyBumo</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+	<stages>
+      <li>
+        <label>Lazy bum</label>
+        <baseOpinionOffset>-5</baseOpinionOffset>
+      </li>
+      <li>
+        <label>They are even more lazy bum than me</label>
+        <baseOpinionOffset>-3</baseOpinionOffset>
+      </li>
+	</stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
     <defName>ecb_bb_ThoughtTabemono</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
     <workerClass>EnhancedBackstoryFeatures.ThoughtWorker_Tabemono</workerClass>
@@ -21,6 +38,7 @@
       </li>
 	 </stages>
   </ThoughtDef>
+ 
 	
 	<ThoughtDef>
     <defName>ecb_bb_ThoughtOshiOtaku</defName>
