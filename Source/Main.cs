@@ -32,12 +32,10 @@ namespace EnhancedBackstoryFeatures
 		public static void UpdateThoughtsDictionary(ref Dictionary<string, int> indexesDictionary, string tag)
 		{
 			// We are initializing, this got to be static because no ThoughtWorker surroundings properly created
-			Log.Warning("++Init");
 			ThoughtDef thoughtDef = DefDatabase<ThoughtDef>.GetNamed(tag);
 			Dictionary<string, ThoughtStage> thoughtsDictionary = thoughtDef.GetModExtension<ThoghtDictionaryDef>()?.items ?? null;
 			if (thoughtsDictionary == null)
 			{
-				Log.Warning("--Null dict"); 
 				return;
 			}
 			indexesDictionary = new Dictionary<string, int>();
@@ -49,7 +47,6 @@ namespace EnhancedBackstoryFeatures
 			}
 			foreach (KeyValuePair<string, ThoughtStage> entry in thoughtsDictionary)
 			{
-				Log.Warning("+AddStage");
 				stages.Add(entry.Value);
 				indexesDictionary.Add(entry.Key, stages.Count - 1);
 			}
