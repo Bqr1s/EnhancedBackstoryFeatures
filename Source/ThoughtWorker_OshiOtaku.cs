@@ -62,7 +62,6 @@ namespace EnhancedBackstoryFeatures
 			{
 				// A hack. Thought stage is actually is a number in stages list. Each stage represent a thought for diffetent group of people with same backstory tags
 				string key = oshiOtakuMatches.First();
-				Log.Warning("++Thought with key:" + key);
 				return ThoughtState.ActiveAtStage(stageIndexesDictionary[key]);
 			}
 			return false;
